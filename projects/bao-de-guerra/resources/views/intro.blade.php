@@ -18,7 +18,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
-                <img src="{{ url('storage/images/logoPreto-2.png') }}" alt="" class="logo-header"/>
+                <img src="{{ asset('/img/logo-GOW.png') }}" alt="" class="logo-header"/>
             </a>
 
             <ul class="nav nav-pills align-items-center">
