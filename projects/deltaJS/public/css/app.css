@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Crimson Pro';
+    src: url(../fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+
+body {
+    font-family: 'Roboto';
+    background-color: #030101;
+}
+
+
+.logo {
+    font-family: 'Crimson Pro';
+    color: #f3ec78;
+    letter-spacing: 1pt;
+    text-align: center;
+}
+.logo::first-letter {
+    color: rgb(71, 201, 104);
+}
+
+.logo-header {
+    font-size: 4rem;
+}
+
+
+.header-page {
+
+}
+
