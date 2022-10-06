@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'God Of War';
+    src: url(../fonts/GODOFWAR.TTF);
+}
+
+
+* {
+    box-sizing: border-box!important;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'God Of War';
+}
