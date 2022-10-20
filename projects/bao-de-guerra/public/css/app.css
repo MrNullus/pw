@@ -33,3 +33,10 @@ body {
     min-height: 90vh;
     margin-bottom: 10rem;
 }
+
+.guia-imagem {
+    width: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat!important;
+}
