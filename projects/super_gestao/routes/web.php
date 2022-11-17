@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrincipalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,23 +14,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+    '/',
+    [PrincipalController::class, 'index']
+)->name('site.principal');
+
+Route::get(
+    '/sobrenos',
+    [SobreNosController::class, 'index']
+)->name('site.sobrenos');
+
+Route::get(
+    '/contato',
+    [ContatoController::class, 'index']
+)->name('site.contato');
 
 Route::get('/login', function () {
     return 'Login';
-});
+})->name('site.login');
 
-Route::get('/clientes', function () {
-    return 'Clientes';
-});
 
-Route::get('/fornecedores', function () {
-    return 'Fornecedores';
-});
+Route::prefix('/app')->group(function () {
 
-Route::get('/produtos', function () {
-    return 'Produtos';
-});
+    Route::get('/clientes', function () {
+        return 'Clientes';
+    })->name('app.clientes');
 
+    Route::get('/fornecedores', function () {
+        return 'Fornecedores';
+    })->name('app.fornecedores');
+
+    Route::get('/produtos', function () {
+        return 'Produtos';
+    })->name('app.produtos');
+
+});
