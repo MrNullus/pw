@@ -17,7 +17,7 @@ use App\Http\Controllers\PrincipalController;
 Route::get(
     '/',
     [PrincipalController::class, 'index']
-)->name('site.principal');
+)->name('site.index');
 
 Route::get(
     '/sobrenos',
