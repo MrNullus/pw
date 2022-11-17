@@ -14,6 +14,11 @@ use App\Http\Controllers\PrincipalController;
 |
 */
 
+Route::fallback(function () {
+    echo 'A rota acessada não existe. <a href={{ route("site.index") }}>Home</a>'
+});
+
+
 Route::get(
     '/',
     [PrincipalController::class, 'index']
