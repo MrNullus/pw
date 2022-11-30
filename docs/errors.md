@@ -23,3 +23,7 @@ Caso acontecer, faça isso:
 + `php artisan key:g  enerate`
 
 +  `composer update`
+
+## Target class does not exist 
+
++ Entrar nesse site: `https://mazer.dev/en/laravel/troubleshooting/how-to-fix-the-target-class-controller-does-not-exist-error-in-laravel/`

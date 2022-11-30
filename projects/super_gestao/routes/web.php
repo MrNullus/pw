@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrincipalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,42 +15,39 @@ use App\Http\Controllers\PrincipalController;
 */
 
 Route::fallback(function () {
-    echo 'A rota acessada não existe. <a href={{ route("site.index") }}>Home</a>'
+    echo 'A rota acessada não existe. <a href={{ route("site.index") }}>Home</a>';
 });
 
 
 Route::get(
-    '/',
-    [PrincipalController::class, 'index']
+    '/', 'PrincipalController@index'
 )->name('site.index');
 
 Route::get(
-    '/sobrenos',
-    [SobreNosController::class, 'index']
+    '/sobrenos', 'SobreNosController@index'
 )->name('site.sobrenos');
 
 Route::get(
-    '/contato',
-    [ContatoController::class, 'index']
+    '/contato', 'ContatoController@index'
 )->name('site.contato');
 
 Route::get('/login', function () {
-    return 'Login';
+    return view('login');
 })->name('site.login');
 
 
 Route::prefix('/app')->group(function () {
 
     Route::get('/clientes', function () {
-        return 'Clientes';
+        return view('clientes');
     })->name('app.clientes');
 
     Route::get('/fornecedores', function () {
-        return 'Fornecedores';
+        return view('fornecedores');
     })->name('app.fornecedores');
 
     Route::get('/produtos', function () {
-        return 'Produtos';
+        return view('produtos');
     })->name('app.produtos');
 
 });
